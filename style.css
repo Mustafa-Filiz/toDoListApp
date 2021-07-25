@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: rgb(255,0,250);
+    background: linear-gradient(0deg, rgba(255,0,250,1) 0%, rgba(0,203,255,1) 70%, rgba(90,255,220,1) 100%);
+}
+
+.container{
+    margin: 120px auto;
+    max-width: 400px;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+    color: black;
+}
+
+header{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.inputField{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.inputField input{
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    padding-left: 15px;
+
+}
+
+.inputField button{
+    height: 100%;
+    width: 15%;
+    margin-left: 5px;
+    background-color:blueviolet;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputField button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.toDoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.toDoList li {
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    font-size: 1.3rem;
+    overflow: hidden;
+    cursor: default;
+}
+
+.toDoList li span{
+    position: absolute;
+    right: -45px;
+    background-color: crimson;
+    color: white;
+    width: 45px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.toDoList li:hover span{
+    position: absolute;
+    right: 0;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.footer button{
+    margin-left: 5px;
+    background-color:blueviolet;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 6px 10px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.footer button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.footer span{
+    font-size: 1.3rem;
+    padding-left: 10px;
+}
