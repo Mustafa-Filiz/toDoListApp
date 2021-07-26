@@ -1,8 +1,7 @@
 const inputBox = document.querySelector(".inputField input");
 const addButton = document.querySelector(".inputField button");
 const toDoList = document.querySelector(".toDoList");
-const deleteAllButton = document.querySelector(".footer button")
-
+const deleteAllButton = document.querySelector(".footer button");
 
 inputBox.onkeyup = () => {
     let userData = inputBox.value;
@@ -48,11 +47,14 @@ function showTask() {
 
     let newLiTag = "";
     listArr.forEach((element, index) => {
-        newLiTag += `<li>${element} <span onclick = "deleteTask(${index})"; ><i class="fas fa-trash-alt"></i></span></li>`
+        newLiTag += `<li><input type="checkbox"> ${element}</input> <span onclick = "deleteTask(${index})"; ><i class="fas fa-trash-alt"></i></span></li>`
     });
+
     toDoList.innerHTML = newLiTag;
     inputBox.value = "";
+
 }
+
 
 function deleteTask(index) {
     let getLocalStorage = localStorage.getItem("New ToDo");
