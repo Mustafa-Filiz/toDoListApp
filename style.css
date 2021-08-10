@@ -82,6 +82,19 @@ header{
     font-size: 1.3rem;
     overflow: hidden;
     cursor: default;
+
+}
+
+.toDoList li.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.toDoList li input{
+    margin-right: 10px;
+}
+
+.toDoList li input:checked{
+    opacity: 0.5;
 }
 
 .toDoList li span{

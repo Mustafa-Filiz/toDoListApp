@@ -47,14 +47,14 @@ function showTask() {
 
     let newLiTag = "";
     listArr.forEach((element, index) => {
-        newLiTag += `<li><input type="checkbox"> ${element}</input> <span onclick = "deleteTask(${index})"; ><i class="fas fa-trash-alt"></i></span></li>`
+        newLiTag += `<li><input type="checkbox" class="check">${element}</input> <span onclick = "deleteTask(${index})"; ><i class="fas fa-trash-alt"></i></span></li>`
     });
-
+    
     toDoList.innerHTML = newLiTag;
     inputBox.value = "";
-
+    
+    
 }
-
 
 function deleteTask(index) {
     let getLocalStorage = localStorage.getItem("New ToDo");
@@ -68,4 +68,15 @@ deleteAllButton.onclick = () => {
     listArr = [];
     localStorage.setItem("New ToDo", JSON.stringify(listArr));
     showTask();
+}
+
+const check = document.querySelector(".check");
+const doneTask = document.querySelector(".toDoList li")
+
+check.onclick = () => {
+    if (check.checked) {
+        doneTask.classList.add("done");
+    }else {
+        doneTask.classList.remove("done");
+    }
 }
